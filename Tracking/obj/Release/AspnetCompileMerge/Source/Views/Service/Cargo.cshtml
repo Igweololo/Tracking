@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Cargo";
+}
+
+<div class="w3-panel w3-container w3-margin">
+    <h1 class="w3-xxlarge">CARGO</h1>
+</div>
+
+
+<ol class="breadcrumb" >
+    <li><a href="#">Home</a></li>
+    <li><a href="@Url.Action("Services","Service")">Services</a></li>
+    <li class="active">Cargo</li>
+</ol>
+
+<div class="w3-container ">
+    <div class="row w3-margin" style="margin-top:30px;">
+        <div class=" w3-bar-block w3-text-gray  w3-light-grey w3-padding-64 col-lg-4 col-md-4 col-sm-12 hidden-xs" style="width:25%">
+            <a href="@Url.Action("Services","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue">SERVICES</a>
+            <a href="@Url.Action("Transport","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue ">GROUNDTRANSPORT</a>
+            <a href="@Url.Action("Cargo","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue active">CARGO</a>
+            <a href="@Url.Action("Warehouse","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue ">WAREHOUSING</a>
+            <a href="@Url.Action("Logistic","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue ">LOGISTIC SERVICE</a>
+            <a href="@Url.Action("Trucking","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue ">TRUCKING SERVICE</a>
+            <a href="@Url.Action("Storage","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue ">STORAGE</a>
+        </div>
+        <div class="w3-margin-right col-lg-4 col-md-4 col-sm-4 ">
+            <p>
+                Team of cargo experts are always available to help you with any queries you might have, or if you want to consult in length your logistic requirements. We would study your requirements and provide you with a quote that would not only suit your budget, but would also save you considerable amount of money in the long term. And, we guarantee that.
+            </p>
+            <p>
+                Our logistics processes, services, tools and systems in combination with strategic warehouse locations help our clients to meet their business logistic needs and achieve their long term business goals with much more accuracy. Moreover, our supply chain management experts would design a logistic process especially for you to align with your business in an integrated fashion.
+            </p>
+            <p>
+                Whether it is the one time delivery you need done, or whether you are looking for professional and commercial trucking service to offload your ongoing trucking requirements, we can assure you of the best services at the most economical pricing. Our logistics consultants are always available to help you with any further and detailed queries you might have regarding our trucking services.
+            </p>
+        </div>
+        <div class="w3-margin-right col-lg-4 col-md-4 col-sm-4 ">
+
+            <div class="w3-margin-bottom">
+                <img src="~/Content/Images/c1.jpg" style="width:100%; height:220px"/>
+            </div>
+            <div>
+                <img src="~/Content/Images/c2.jpg" style="width:100%; height:220px"/>
+            </div>
+        </div>
+    </div>
+</div>
+

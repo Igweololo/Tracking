@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Tracking.Data.Track>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row w3-margin-top w3-margin-bottom">
+    <div class="col-md-6 col-sm-6 col-xs-6" >
+        <h4 class="w3-text-light-green">@ViewBag.Name</h4>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-6">
+        <a href="@Url.Action("Create")" class=" w3-button w3-round-medium w3-green w3-right">
+            Create Details
+        </a>
+</div>
+</div>
+
+<div class="w3-responsive">
+    <table class="table table-bordered">
+        <tr class="w3-light-green">
+            <th>
+                
+                    @Html.DisplayNameFor(model => model.Destination)
+
+               
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                
+                    @Html.DisplayNameFor(model => model.Consignment)
+              
+
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            using (Html.BeginForm("Delete", "Track", new { Id = item.TrackId }))
+            {
+
+
+                <tr>
+                    <td>
+                      
+                            @Html.Markdown(item.Destination)
+                            @*@Html.DisplayFor(modelItem => item.Destination)*@
+
+                      
+                    </td>
+                    <td>
+                        <h6>
+                            @Html.DisplayFor(modelItem => item.Date)
+                        </h6>
+                    </td>
+                    <td>
+                       
+                            @Html.Markdown(item.Consignment)
+                            @*@Html.DisplayFor(modelItem => item.Consignment)*@
+
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.TrackId }) |
+                        <input type="submit" value="Delete"
+                               onclick="return confirm('Are you sure you want to delete this?');" />
+
+
+                    </td>
+                </tr>
+            }
+        }
+
+    </table>
+</div>
+

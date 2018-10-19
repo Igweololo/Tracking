@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Warehouse";
+}
+
+<div class="w3-panel w3-container">
+    <h2 class="w3-xxlarge">WAREHOUSING</h2>
+</div>
+
+
+<ol class="breadcrumb" >
+    <li><a href="#">Home</a></li>
+    <li><a href="@Url.Action("Services","Service")">Services</a></li>
+    <li class="active">Warehousing</li>
+</ol>
+
+<div class="w3-container ">
+    <div class="row w3-margin" style="margin-top:30px;">
+        <div class=" w3-bar-block w3-text-gray w3-margin-right w3-light-grey w3-padding-64 col-lg-4 hidden-xs" style="width:25%">
+            <a href="@Url.Action("Services","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue">SERVICES</a>
+            <a href="@Url.Action("Transport","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue ">GROUND TRANSPORT</a>
+            <a href="@Url.Action("Cargo","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue ">CARGO</a>
+            <a href="@Url.Action("Warehouse","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue active">WAREHOUSING</a>
+            <a href="@Url.Action("Logistic","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue ">LOGISTIC SERVICE</a>
+            <a href="@Url.Action("Trucking","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue ">TRUCKING SERVICE</a>
+            <a href="@Url.Action("Storage","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue ">STORAGE</a>
+        </div>
+        <div class="w3-margin-right col-lg-4">
+            <p>
+                Our warehousing and distribution services are regularly audited and analyzed to ensure that it meets the contemporary business models, and any and all upgrades are made to ensure our services continue to help our clients meet their logistic requirements efficiently. Our logistics team have years of experience in this business and can handle long term and large scale assignments with utter professionalism, and our customer service helps the clients to stay in the loop throughout the process, whenever they require any assistance. Consult with our experts today for your logistics, warehousing and distribution services requirements, and allow us to make a positive difference in your business.
+            </p>
+            <p>
+                Moreover, our supply chain management experts would design a logistic process especially for you to align with your business in an integrated fashion. Our warehousing services, includes a wide range of services that includes inventory control and management, load building, yard management, static and dynamic replenishment, kitting, order processing, vendor performance, cross docking, supply chain management, logistic integration, bar coding, quality control, labelling, carrier performance, and so on.
+            </p>
+        </div>
+        <div class="w3-margin-right col-lg-4">
+
+            <div class="w3-margin-bottom">
+                <img src="~/Content/Images/w1.jpg" style="width:100%; height:250px"/>
+            </div>
+            <div>
+                <img src="~/Content/Images/w2.jpg" style="width:100%; height:250px"/>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Trucking";
+}
+
+<div class="w3-panel w3-container">
+    <h2 class="w3-xxlarge">TRUCKING SERVICE</h2>
+</div>
+
+
+<ol class="breadcrumb" >
+    <li><a href="#">Home</a></li>
+    <li><a href="@Url.Action("Services","Service")">Services</a></li>
+    <li class="active">Trucking Service</li>
+</ol>
+
+<div class="w3-container ">
+    <div class="row w3-margin" style="margin-top:30px;">
+        <div class=" w3-bar-block w3-text-gray w3-margin-right w3-light-grey w3-padding-64 col-lg-4 hidden-xs" style="width:25%">
+            <a href="@Url.Action("Services","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue">SERVICES</a>
+            <a href="@Url.Action("Transport","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue ">GROUND TRANSPORT</a>
+            <a href="@Url.Action("Cargo","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue ">CARGO</a>
+            <a href="@Url.Action("Warehouse","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue ">WAREHOUSING</a>
+            <a href="@Url.Action("Logistic","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue ">LOGISTIC SERVICE</a>
+            <a href="@Url.Action("Trucking","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue active">TRUCKING SERVICE</a>
+            <a href="@Url.Action("Storage","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue ">STORAGE</a>
+        </div>
+        <div class="w3-margin-right col-lg-4">
+            <p>
+                Our trucking service is based on the principle of providing our clients with the flexibility and reliability, to move legal load across town, or across the country, whenever they want. Our in-house team of experienced drivers We believe in providing quality services to our clients, and with the experience of decades backing us in the field of logistics, there is nothing we overlook when we handle your cargo. Starting from loading to unloading at the destination, and maintaining the highest standards in terms of safety while in transit, we take nothing to chance. Even if the load is oversized or over-dimensional in nature, our logistic experts and technicians take care of the minute details to ensure the safety of the delivery at its destination, and on time, every time.
+            </p>
+            <p>
+                We ensure that our fleet of trucks are always well maintained, and have the best and the most updated fleet of trucks in service to ensure that it is capable of delivering high value, and oversized deliverables, efficiently and effectively, without causing any kind of loss, which is generally the case seen with many outsourced trucking service providers. Our in-house team of experienced drivers, logistic experts, repair and maintenance technicians are on guard 24 by 7 to ensure that the trucks are ready on time, and in optimum condition to handle your deliveries.
+            </p>
+        </div>
+        <div class="w3-margin-right col-lg-4">
+
+            <div class="w3-margin-bottom">
+                <img src="~/Content/Images/t1.jpg" style="width:100%; height:250px"/>
+            </div>
+            <div>
+                <img src="~/Content/Images/t2.jpg"  style="width:100%; height:250px"/>
+            </div>
+        </div>
+    </div>
+</div>

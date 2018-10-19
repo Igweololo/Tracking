@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Tracking.Data.Detail>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-success w3-margin-top alert-dismissible w3-animate-opacity" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>@TempData["Error"]
+    </div>
+}
+
+
+<a href="@Url.Action("Create")" class="w3-margin-top w3-margin-bottom w3-button w3-round-medium w3-green w3-right">
+    Generate Code
+</a>
+<table class="w3-table-all">
+    <tr class="w3-light-green">
+        <th>
+            Name
+        </th>
+        <th>
+            Tracker
+        </th>
+        <th>
+            Created Date
+        </th>
+        <th>
+            Sender Details
+        </th>
+        <th>
+            Receiver Details
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        using (Html.BeginForm("Delete", "Home", new { Id = item.DetailId }))
+        {
+            <tr>
+                <td>
+                    <a href="@Url.Action("Index", "Track", new { Area = "Admin", Id = item.DetailId })">@Html.DisplayFor(modelItem => item.Name)</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Digit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedDate)
+                </td>
+                <td>
+                    @*@item.Sender.Replace("\n", "\r\n")*@
+                    @Html.Markdown(item.Sender)
+                </td>
+                <td>
+                    @Html.Markdown(item.Receiver)
+                    @*@Html.DisplayFor(modelItem => item.Receiver).ToHtmlString()*@
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.DetailId }) |
+                    <input type="submit" value="Delete"
+                           onclick="return confirm('Are you sure you want to delete this?');" />
+                </td>
+            </tr>
+        }
+    }
+
+</table>

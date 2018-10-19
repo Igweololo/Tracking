@@ -1,0 +1,129 @@
+﻿@model Tracking.Models.TrackViewModel
+@{
+    ViewBag.Title = "Track";
+}
+
+<div class="w3-panel w3-padding-16 w3-container">
+    <h1 class="w3-xxlarge">TRACKER</h1>
+    <h5 class="w3-text-light-blue">Know exactly where your cargo/freight is at all times</h5>
+</div>
+
+
+<ol class="breadcrumb w3-light-grey  w3-border">
+    <li><a href="#">Home</a></li>
+    <li class="active">Tracking</li>
+</ol>
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger alert-dismissible w3-animate-opacity" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>@TempData["Error"]
+    </div>
+}
+
+<div class="row w3-container">
+
+    <div class=" w3-center " style="margin-bottom:60px">
+
+        <p class="w3-section">
+            Enter your tracking code below and click the "Track" button to find out exactly where <br /> your cargo is right now and when it will arrive at its final destination.
+        </p>
+
+
+        @using (Html.BeginForm())
+        {
+
+            
+
+            <div class="form-inline">
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group">
+                    <div class=" col-xs-8 ">
+                        @Html.EditorFor(model => model.Details.Digit, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter Code" } })
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-xs-2 col-md-10">
+                        <input type="submit" value="Submit" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+        }
+    </div><!-- /.col -->
+
+    @if (Model.Tracks.Count >= 1)
+    {
+
+    <div class="w3-container">
+        
+        <h3> <b>Tracking Result : @Model.Details.Digit</b></h3>
+
+        <div class="row" style="height:inherit">            
+            <div class="col-sm-6 col-xs-6">
+                <div class="w3-card">
+                    <header class="w3-container w3-light-blue">
+                        <h4>Sender Details</h4>
+                    </header>
+
+                    <div class="w3-container">
+                        @Html.Markdown(Model.Details.Sender)
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-6">
+                <div class="w3-card">
+                    <header class="w3-container w3-light-blue">
+                        <h4>Receiver Details</h4>
+                    </header>
+
+                    <div class="w3-container">
+                        @Html.Markdown(Model.Details.Receiver)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <table class="w3-table-all w3-margin-top">
+            <tr class="w3-light-blue">
+
+                <th>
+                    Date and Time
+                </th>
+                <th>
+                    Destination Details
+                </th>
+                <th>
+                    Consignment Status
+                </th>
+            </tr>
+
+            @foreach (var item in Model.Tracks)
+            {
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                    <td>
+                        @Html.Markdown(item.Destination)
+                    </td>
+                    <td>
+                        @Html.Markdown(item.Consignment)
+                    </td>
+
+                </tr>
+
+            }
+
+        </table>
+    </div>
+       
+    }
+</div>
+

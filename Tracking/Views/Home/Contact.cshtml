@@ -1,0 +1,70 @@
+﻿@model Tracking.Models.EmailFormModel
+@{
+    /**/
+
+    ViewBag.Title = "Contact";
+}
+
+@if (TempData["ContactError"] != null)
+{
+    <div class="alert alert-success w3-margin-top alert-dismissible w3-animate-opacity" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>@TempData["ContactError"]
+    </div>
+}
+
+<div class="row  w3-margin w3-container" style="margin-top:30px">
+    <div class="col-md-2 w3-card w3-small w3-border-red">
+
+        <h3 class="w3-text-black">
+            <b>CONTACT ADDRESS</b>
+        </h3>
+        <p>
+            <strong>Parcel Express Cargo</strong><br>
+            (USA OFFICE) <br>
+            907 Hillcrest Ave,<br>
+            Lake Placid, FL, 33852<br>
+            USA
+        </p>
+        <p>
+            (SINGAPORE OFFICE)<br>
+            9 Airline Road, #02-09, <br>
+            Singapore 819827<br>
+            Singapore
+        </p>
+        <p>
+            (MALAYSIA OFFICE)<br>
+            Lot 11, Ninja Logistic Sdn Bhd, <br>
+            Jalan Delima 1/1, <br>
+            Subang Hi-tech Industrial Park, <br>
+            40150 Shah Alam, <br>
+            Selangor, <br>
+            Malaysia
+        </p>
+        <p>
+            (UNITED KINGDOM OFFICE)<br>
+            Express House, <br>
+            Abeles Way, <br>
+            Atherstone CV9 2RY, <br>
+            United Kingdom
+        </p>
+        <p>
+
+
+        </p>
+
+    </div>
+    <div class="col-md-6 w3-card ">
+        <div class="w3-container " id="contact">
+            <h3 class="w3-text-black "><b>SEND EMAIL</b></h3>
+            <form action="/home/contact" method="post">
+                <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
+                <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
+                <input class="w3-input w3-section w3-border" type="text" placeholder="Message" required name="Message" />
+                <button class="w3-button w3-black w3-section" type="submit">
+                    <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

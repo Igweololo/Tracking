@@ -1,0 +1,362 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+@if (TempData["Notification"] != null)
+{
+    <div class="alert alert-success w3-margin-top alert-dismissible w3-animate-opacity" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>@TempData["Notification"]
+    </div>
+}
+
+<div class=" w3-section">
+    <div class="w3-display-hover mySlides w3-row">
+        <img src="~/Content/Images/train.jpg" style="width:100%;height:450px">
+        <div class="w3-padding-16 w3-display-left w3-container w3-text-white w3-col s8">
+            <p>
+                <span>Starting from loading to unloading and maintaining the highest standards in terms of <br /> safety while in transit, we take nothing to chance.</span>
+
+            </p>
+
+            <p>
+                <a href="@Url.Action("Services","Service")" class="btn btn-primary w3-small">OUR SERVICES</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="w3-display-container mySlides w3-row ">
+        <img class="" src="~/Content/Images/air.jpg" style="width:100%;height:450px">
+        <div class="w3-padding-16 w3-display-left w3-container w3-text-white w3-col s8">
+            <p>
+                <span>We study your requirements and provide you with a quote that would not only suit your budget,<br /> but would also save you considerable amount of money in the long term. </span>
+            </p>
+
+            <a href="@Url.Action("About","Home")" class="btn btn-primary w3-small">READ MORE</a>
+        </div>
+    </div>
+
+    <div class="w3-display-container mySlides w3-row">
+        <img class="" src="~/Content/Images/land.jpg" style="width:100%;height:450px">
+        <div class="w3-padding-16 w3-display-left w3-container w3-text-white w3-col s8">
+            <p>
+                <span>We provide logistic services in the nation, whether it is freight transportation, supply chain solutions, warehousing and many more</span>
+            </p>
+
+            <a href="@Url.Action("About","Home")" class="btn btn-primary w3-small">READ MORE</a>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+
+<!-- Page content -->@*style="max-width:1564px"*@
+<div class=" w3-padding ">
+
+
+
+    <div class="w3-row-padding w3-margin-top w3-margin-bottom w3-animate-right w3-content" style="height:420px">
+        <div class="w3-col l3 m6 w3-margin-bottom  w3-card-4 w3-border">
+            <div class="w3-display-container">
+                <div class="w3-padding-large">
+
+                    <h4 class="w3-text-black"><b>WELCOME</b></h4>
+                    <br />
+
+                    <p>
+                        Our warehousing services are known nationwide to be one of the most reliable, safe and affordable, because we take pride in delivering the best of warehousing services, at the most reasonable prices. Our own warehouses, as well as our partner's warehouses are located at strategic locations to ensure that there is no additional cost.
+                    </p>
+
+                    <p>
+                        <a class="read-more" href="@Url.Action("About","Home")">MORE ABOUT US</a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom panel  ">
+            <div class="w3-display-container">
+                <a href="cargo.html">
+                    <img alt="Cargo" class="img-responsive" src="~/Content/Images/cargo.jpg" style="width:100%; height:150px;">
+                </a>
+
+                <h4 class="w3-text-black"><b>CARGO</b></h4>
+
+                <p>
+                    Team of cargo&nbsp;experts are always available to help you with any queries you might have, or if you want to consult in length your logistic requirements. We would study your requirements and provide you with a quote that would not only suit your …
+                </p>
+
+                <p>
+                    <a class="read-more" href="@Url.Action("Cargo","Service")">Read more</a>
+                </p>
+
+            </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom   panel">
+            <div class="w3-display-container">
+                <a href="cargo.html">
+                    <img alt="Cargo" class="img-responsive" src="~/Content/Images/logistics.jpg" style="width:100%; height:150px;">
+                </a>
+
+                <h4 class="w3-text-black"><b>LOGISTIC</b></h4>
+                <p>
+                    We provide logistic services in the nation, whether it is freight transportation, supply chain solutions, warehousing and distribution, customer resource area services, customs, security and insurance, temperature controlled logistics, industry …
+                </p>
+
+                <p>
+                    <a class="read-more" href="@Url.Action("Logistic","Service")">Read more</a>
+                </p>
+            </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom panel ">
+            <div class="w3-display-container">
+                <a href="cargo.html">
+                    <img alt="Cargo" class="img-responsive" src="~/Content/Images/warehouse.jpg" style="width:100%; height:150px;">
+                </a>
+
+                <h4 class="w3-text-black"><b>STORAGE</b></h4>
+                <p>
+                    We take pride in catering to a broad range of clientele throughout the country with our warehousing services, which is comprehensive, reliable and flexible – qualities that are essential to help businesses in this market. Our experienced experts …
+                </p>
+
+                <p>
+                    <a class="read-more" href="@Url.Action("Storage","Service")">Read more</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-panel w3-section">
+        <h3></h3>
+        <p></p>
+    </div>
+
+    <div class="row  w3-margin-bottom ">
+
+        <div class="col-sm-12 ">
+
+            <h1 class="w3-xxlarge w3-text-gray w3-content">
+                <b><span>OUR SERVICES</span></b>
+            </h1>
+
+        </div><!-- /.col -->
+
+    </div>
+
+    <div class="w3-row  w3-section w3-animate-right w3-content" id="Service">
+        <div class="w3-col  l4 m4 w3-margin-bottom ">
+            <div class="w3-display-container">
+                <div class="w3-margin-bottom panel w3-padding-16" style="height:120px">
+                    <i class="fa fa-dropbox w3-xxlarge pull-right w3-margin-top w3-margin-right"></i>
+                    <h6 class="w3-margin-left"><b>PACKAGING AND STORAGE</b></h6>
+                    <h6 class="w3-margin-left w3-opacity">We can package and store your things.</h6>
+                </div>
+
+                <div class="w3-margin-bottom panel w3-padding-16" style="height:120px">
+                    <i class="fa fa-archive w3-xxlarge pull-right w3-margin-top w3-margin-right"></i>
+                    <h6 class="w3-margin-left"><b>WAREHOUSING</b></h6>
+
+                    <h6 class="w3-margin-left w3-opacity">We have top notch security and loads of space. Store your stuff at our warehouse.</h6>
+                </div>
+            </div>
+        </div>
+        <div class="w3-col l4  m4 w3-margin-bottom">
+            <div class="w3-display-container">
+                <div class="w3-margin-bottom panel w3-padding-16" style="height:120px">
+                    <i class="fa fa-truck w3-xxlarge pull-right w3-margin-top w3-margin-right"></i>
+                    <h6 class="w3-margin-left"><b>CARGO</b></h6>
+
+                    <h6 class="w3-margin-left w3-opacity">Let us transport your things from point A to point B fast and securely. </h6>
+                </div>
+
+                <div class="w3-margin-bottom panel w3-padding-16" style="height:120px">
+                    <i class="fa fa-home w3-xxlarge pull-right w3-margin-top w3-margin-right"></i>
+                    <h6 class="w3-margin-left"><b>DOOR-TO-DOOR DELIVERY</b></h6>
+                    <h6 class="w3-margin-left w3-opacity">Do you need something delivered? We are what you are looking for! </h6>
+                </div>
+            </div>
+        </div>
+        <div class="w3-col l4 m4 w3-margin-bottom ">
+            <div class="w3-display-container">
+                <div class="w3-margin-bottom panel w3-padding-16" style="height:120px">
+                    <i class="fa fa-globe w3-xxlarge pull-right w3-margin-top w3-margin-right"></i>
+                    <h6 class="w3-margin-left">WORLDWIDE TRANSPORT</h6>
+                    <h6 class="w3-margin-left w3-opacity">We can transport your things anywhere in the world. </h6>
+                </div>
+                <div class="w3-margin-bottom panel w3-padding-16" style="height:120px">
+                    <i class="fa fa-road w3-xxlarge pull-right w3-margin-top w3-margin-right"></i>
+                    <h6 class="w3-margin-left">GROUND TRANSPORT</h6>
+                    <h6 class="w3-margin-left w3-opacity">Transport your things with our super moving vans.</h6>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="w3-panel w3-section">
+        <h3></h3>
+        <p></p>
+    </div>
+    @*padding-right:-250px;padding-left:-250px; *@
+    <div class="w3-padding-32 w3-section" style="background-image:url('../Content/Images/export.jpg'); background-size:cover">
+
+
+        <div class="container w3-text-gray w3-center">
+
+            <h1 class="text-center w3-xxlarge"><b>OUR CORE VALUES</b></h1>
+            <p class="text-center">
+                <span class="w3-text-blue"><strong>WRITTEN BY PARCEL COURIER CEO</strong></span>
+            </p>
+            
+            <h6 class="w3-opacity" style="padding:77px 54px 54px 52px;font-size:15px;line-height:36px;">
+                Core values are the fundamental beliefs of a person or organization. The core values are the guiding principles that dictate behavior and action. Core values can help people to know what is right from wrong, they can help companies to determine if they are on the right path and fulfilling their business goals; and they create an unwavering and unchanging guide. There are many different types of core values and many different examples of core values depending upon the context.
+            </h6>
+            <p class="text-center">&nbsp;</p>
+
+        </div><!-- /.col -->
+
+
+    </div>
+
+    <div class="w3-panel w3-section">
+        <h3></h3>
+        <p></p>
+    </div>
+
+    <div class="row  w3-margin-top w3-margin-bottom ">
+
+        <div class="col-sm-12">
+
+            <h1 class="w3-xxlarge w3-text-gray w3-center w3-content">
+                <b><span>TESTIMONIALS</span></b>
+            </h1>
+
+        </div><!-- /.col -->
+
+    </div>
+
+    <div class="w3-row-padding w3-grayscale slides w3-content">
+
+        <div class="w3-col l4 m4 w3-margin-bottom ">
+            <h3>Haziq</h3>
+            <p class="w3-opacity w3-text-blue">Malaysia</p>
+            <blockquote class="text" style=" font-style:normal;background-color: #f7f7f7;color: #777777;padding:67px 34px 34px 42px;font-size:15px;line-height:26px;">
+                Excellent services very happy with the assistance I got and my shipment was transported safely to its destination. Highly Recommended !!
+            </blockquote>
+
+        </div>
+        <div class="w3-col l4 m4 w3-margin-bottom ">
+            <h3>Afiq</h3>
+            <p class="w3-opacity  w3-text-blue">Malaysia</p>
+            <blockquote class="text" style="font-style:normal;background-color: #f7f7f7;color: #777777;padding:67px 34px 34px 42px;font-size:15px;line-height:26px;">
+
+                They are very efficient and professional.
+                I do take orders from my customers with confidence, knowing that I have a very reliable shipping company.
+            </blockquote>
+
+        </div>
+        <div class="w3-col l4 m4 w3-margin-bottom ">
+            <h3>John</h3>
+            <p class="w3-opacity  w3-text-blue">USA</p>
+            <blockquote class="text" style="font-style:normal;background-color: #f7f7f7;color: #777777;padding:67px 34px 34px 42px;font-size:15px;line-height:26px;">
+
+                All I do is just place orders and have them delivered.
+                Parcel Courier has really helped my business to grow because of the consistent delivery.
+            </blockquote>
+
+        </div>
+    </div>
+    <div class="w3-row-padding w3-grayscale slides">
+        <div class="w3-col l4 m4 w3-margin-bottom ">
+            <h3>Ahmed</h3>
+            <p class="w3-opacity  w3-text-blue">Malaysia</p>
+            <blockquote class="text" style="font-style:normal;background-color: #f7f7f7;color: #777777;padding:67px 34px 34px 42px;font-size:15px;line-height:26px;">
+                I got a simple and excellent delivery on my goods, and customer service is top notch. Kudos guys!
+            </blockquote>
+
+        </div>
+        <div class="w3-col l4 m4 w3-margin-bottom ">
+            <h3>DHAN</h3>
+            <p class="w3-opacity  w3-text-blue"> Singapore</p>
+            <blockquote class="text" style="font-style:normal;background-color: #f7f7f7;color: #777777;padding:67px 34px 34px 42px;font-size:15px;line-height:26px;">
+                Fast delivery good services at lowest courier charges.
+            </blockquote>
+
+        </div>
+        <div class="w3-col l4 m4 w3-margin-bottom ">
+            <h3>Bill</h3>
+            <p class="w3-opacity  w3-text-blue">USA</p>
+            <blockquote class="text" style="font-style:normal;background-color: #f7f7f7;color: #777777;padding:67px 34px 34px 42px;font-size:15px;line-height:26px;">
+                I can bank on parcel courier company for a laudable service delivery.
+            </blockquote>
+
+        </div>
+    </div>
+
+
+
+    <div class="w3-center">
+
+        <button class="w3-button demo" onclick="currentDiv(1)">1</button>
+        <button class="w3-button demo" onclick="currentDiv(2)">2</button>
+    </div>
+
+
+
+
+    <!-- End page content -->
+</div>
+
+
+
+<script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) { myIndex = 1 }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 6000); // Change image every 2 seconds
+    }
+</script>
+
+
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+        showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("slides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = x.length }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" w3-red", "");
+        }
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " w3-red";
+    }
+</script>

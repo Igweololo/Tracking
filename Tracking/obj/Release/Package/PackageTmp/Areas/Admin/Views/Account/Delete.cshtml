@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Tracking.Data.User>
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Dodo")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    using (Html.BeginForm("Delete", "Account", new { Id = item.UserId }))
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+           
+            <input type="submit" value="Delete"
+                   onclick="return confirm('Are you sure you want to delete this?');" />
+        </td>
+    </tr>
+    }
+}
+
+</table>

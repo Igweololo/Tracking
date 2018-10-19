@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "Services";
+}
+
+<div class="w3-panel w3-container">
+    <h1 class="w3-xxlarge">SERVICES</h1>
+</div>
+
+
+<ol class="breadcrumb" >
+    <li><a href="#">Home</a></li>
+    <li class="active">Services</li>
+</ol>
+
+<div class="w3-container ">
+    <div class="row w3-margin" style="margin-top:30px;">
+        <div class=" w3-bar-block w3-text-gray w3-light-grey w3-padding-64 col-lg-3 col-sm-3 hidden-xs" style="width:25%;">
+            <a href="@Url.Action("Services","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue active">SERVICES</a>
+            <a href="@Url.Action("Transport","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue ">GROUND TRANSPORT</a>
+            <a href="@Url.Action("Cargo","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue ">CARGO</a>
+            <a href="@Url.Action("Warehouse","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue ">WAREHOUSING</a>
+            <a href="@Url.Action("Logistic","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue ">LOGISTIC SERVICE</a>
+            <a href="@Url.Action("Trucking","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue ">TRUCKING SERVICE</a>
+            <a href="@Url.Action("Storage","Service")" class="w3-bar-item w3-button w3-border-bottom w3-hover-blue ">STORAGE</a>
+        </div>
+        <div class=" col-lg-3 col-sm-3">
+            <img src="~/Content/Images/ground.jpg" style="width:100%; " />
+            <h3 class="w3-large w3-text-black"><b>GROUND TRANSPORT</b></h3>
+            <p>
+                Ground transport and freight forwarding services, along with other ancillary services, helps us to provide tailor made logistic solutions to our clients, which we design as per their requirements and business ecosystem to help cut their cost, …
+            </p>
+            <p>
+                <a href="@Url.Action("Transport","Service")" style="position: relative;font-weight: bold;text-transform: uppercase;">Read more</a>
+            </p>
+
+            <img src="~/Content/Images/warehouse.jpg" style="width:100%;" />
+            <h3 class="w3-large w3-text-black"><b>WAREHOUSING</b></h3>
+            <p>
+                Our warehousing and distribution services are regularly audited and analyzed to ensure that it meets the contemporary business models, and any and all upgrades are made to ensure our services continue to help our clients meet their logistic …
+            </p>
+            <p>
+                <a href="@Url.Action("Warehouse","Service")" style="position: relative;font-weight: bold;text-transform: uppercase;">Read more</a>
+            </p>
+        </div>
+        <div class="col-lg-3 col-sm-3">
+            <img src="~/Content/Images/logistics.jpg" style="width:100%;" />
+            <h3 class="w3-large w3-text-black"><b>LOGISTIC SERVICE</b></h3>
+            <p>
+                We provide logistic services in the nation, whether it is freight transportation, supply chain solutions, warehousing and distribution, customer resource area services, customs, security and insurance, temperature controlled logistics, industry …
+            </p>
+            <p>
+                <a href="@Url.Action("Logistic","Service")" style="position: relative;font-weight: bold;text-transform: uppercase;">Read more</a>
+            </p>
+
+            <img src="~/Content/Images/cargo.jpg" style="width:100%;"/>
+            <h3 class="w3-large w3-text-black"><b>CARGO</b></h3>
+            <p>
+                Team of cargo experts are always available to help you with any queries you might have, or if you want to consult in length your logistic requirements. We would study your requirements and provide you with a quote that would not only suit your …
+            </p>
+            <p>
+                <a href="@Url.Action("Cargo","Service")" style="position: relative;font-weight: bold;text-transform: uppercase;">Read more</a>
+            </p>
+        </div>
+        <div class="col-lg-3 col-sm-3">
+            <img src="~/Content/Images/trucking.jpg" style="width:100%" />
+            <h3 class="w3-large w3-text-black"><b>TRUCKING SERVICE</b></h3>
+            <p>
+                Our trucking service is based on the principle of providing our clients with the flexibility and reliability, to move legal load across town, or across the country, whenever they want. Our in-house team of experienced …
+            </p>
+            <p>
+                <a href="@Url.Action("Trucking","Service")" style="position: relative;font-weight: bold;text-transform: uppercase;">Read more</a>
+            </p>
+
+            <img src="~/Content/Images/ware.jpg"  style="width:100%" />
+            <h3 class="w3-large w3-text-black"><b>STORAGE</b></h3>
+            <p>
+                We take pride in catering to a broad range of clientele throughout the country with our warehousing services, which is comprehensive, reliable and flexible – qualities that are essential to help businesses in this market. Our experienced experts …
+            </p>
+            <p>
+                <a href="@Url.Action("Storage","Service")" style="position: relative;font-weight: bold;text-transform: uppercase;">Read more</a>
+            </p>
+        </div>
+    </div>
+</div>
+
